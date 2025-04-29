@@ -52,7 +52,7 @@ window.addEventListener("keydown", function (e) {
     }
   }
 
-  if (e.key === "r" || e.ctrlKey === "r" ) {
+  if (e.key === "r" ) {
     wrapper.innerHTML = "";
     arr = [];
     arr1 = [];
