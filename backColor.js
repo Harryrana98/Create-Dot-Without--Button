@@ -1,0 +1,25 @@
+const colors = [
+    { backgroundColor: "black" },
+    { backgroundColor: "white" },
+    { backgroundColor: "yellow" },
+    { backgroundColor: "red" },
+    { backgroundColor: "purple" },
+    { backgroundColor: "green" },
+    { backgroundColor: "blue" },
+    { backgroundColor: "orange" },
+    { backgroundColor: "brown" },
+    { backgroundColor: "pink" },
+    { backgroundColor: "gray" },
+    { backgroundColor: "violet" },
+    { backgroundColor: "aqua" },
+    { backgroundColor: "silver" },
+    { backgroundColor: "teal" },
+    { backgroundColor: "turquoise" },
+    { backgroundColor: "tan" },
+    { backgroundColor: "lavender" },
+    { backgroundColor: "maroon" },
+    { backgroundColor: "olive" },
+    { backgroundColor: "navy" },
+  ];
+
+  export default(colors)

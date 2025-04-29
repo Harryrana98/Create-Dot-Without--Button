@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#wrapper{
+ 
+  position: relative;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+}
+
+.para{
+  width: 20px;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.content h2{
+  margin-top: 1rem;
+  font-family: aria ,sans-serif;
+  font-weight: 100;
+  color: gray;
+}

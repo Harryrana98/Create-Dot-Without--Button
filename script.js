@@ -1,0 +1,52 @@
+import colors from "./backColor.js";
+// console.log(colors);
+
+const wrapper = document.querySelector("#wrapper");
+
+let arr = [];
+let arr1 = [];
+
+window.addEventListener("click", function (e) {
+  const para = this.document.createElement("p");
+  para.className = "para";
+
+  const x = e.clientX;
+  const y = e.clientY;
+
+  para.style.left = `${x - 10}px`;
+  para.style.top = `${y - 10}px`;
+
+  const RndColor = colors[getRandomIndex()];
+  para.style.backgroundColor = RndColor.backgroundColor;
+
+//   console.log(para);
+  wrapper.append(para);
+  arr.push(para);
+  arr1 = [];
+});
+
+function getRandomIndex() {
+  return Math.floor(Math.random() * colors.length);
+}
+// console.log(getRandomIndex());
+// getRandomIndex()
+
+window.addEventListener("keydown", function (e) {
+  if (e.ctrlKey && e.key === "z") {
+    const lastElement = arr.pop();
+    wrapper.removeChild(lastElement);
+    arr1.push(lastElement);
+  }
+
+  if (e.ctrlKey && e.key === "y") {
+    const redo = arr1.pop();
+    wrapper.append(redo);
+    arr.push(redo);
+  }
+
+  if (e.key === "r" || e.ctrlKey === "r" ) {
+    wrapper.innerHTML = "";
+    arr = [];
+    arr1 = [];
+  }
+});
