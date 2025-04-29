@@ -7,7 +7,8 @@ let arr = [];
 let arr1 = [];
 
 window.addEventListener("click", function (e) {
-  const para = this.document.createElement("p");
+    if(!wrapper || colors.length===0) return;
+  const para =document.createElement("p");
   para.className = "para";
 
   const x = e.clientX;
@@ -32,16 +33,23 @@ function getRandomIndex() {
 // getRandomIndex()
 
 window.addEventListener("keydown", function (e) {
+    if (!wrapper) return;
   if (e.ctrlKey && e.key === "z") {
     const lastElement = arr.pop();
-    wrapper.removeChild(lastElement);
-    arr1.push(lastElement);
+    if(lastElement){
+
+        wrapper.removeChild(lastElement);
+        arr1.push(lastElement);
+    }
   }
 
   if (e.ctrlKey && e.key === "y") {
     const redo = arr1.pop();
-    wrapper.append(redo);
-    arr.push(redo);
+    if(redo){
+
+        wrapper.appendChild(redo);
+        arr.push(redo);
+    }
   }
 
   if (e.key === "r" || e.ctrlKey === "r" ) {
